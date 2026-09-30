@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Buscador de personajes — Rick and Morty</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Buscador de <span>personajes</span></h1>
+      </header>
+
+      <form class="filtros">
+        <input
+          type="text"
+          id="filtro-nombre"
+          placeholder="Buscar por nombre..."
+        />
+        <select id="filtro-estado">
+          <option value="">Todos los estados</option>
+          <option value="alive">Vivo</option>
+          <option value="dead">Muerto</option>
+          <option value="unknown">Desconocido</option>
+        </select>
+        <select id="filtro-especie">
+          <option value="">Todas las especies</option>
+          <option value="Human">Humano</option>
+          <option value="Alien">Alien</option>
+        </select>
+        <button type="button" id="ordenar">Ordenar A-Z</button>
+        <label for="mostrar-primeros">
+          <input type="checkbox" name="mostrar" id="mostrar-primeros" />
+          Mostrar 10 primeros
+        </label>
+      </form>
+
+      <p id="contador"></p>
+      <p id="stats"><span id="contador-stats"></span> <span id="hay-muertos"></span></p>
+
+      <section id="resultados" class="personajes-grid"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

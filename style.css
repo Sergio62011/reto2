@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #10141d;
+  color: #f4f6fb;
+}
+
+h1 span {
+  color: #9ee66a;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.filtros input,
+.filtros select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #172033;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* TODO: dale layout a .personajes-grid con CSS Grid o con Flexbox.
+   Compara las dos versiones en "Grid vs Flex" antes de decidir cuál usar aquí. */
+.personajes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.personaje-card {
+  background: #172033;
+  border-radius: 12px;
+  width: auto;
+  overflow: hidden;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.personaje-card:hover {
+  transform: translateY(-8px);
+  border: #1a6e09 1px solid;
+}
+
+.personaje-card img {
+  width: 100%;
+  display: block;
+}
+
+.personaje-card h3,
+.personaje-card p {
+  margin: 8px 12px;
+}
+
+#stats,
+#contador {
+  color: #8d97b3;
+  font-size: 14px;
+}
+
+#contador-stats,
+#hay-muertos {
+  font-size: 12px;
+}
+
+#hay-muertos {
+  padding: 2px 10px 3px;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.muertos {
+  background-color: #f0606029;
+  color: #ffb3b3;
+}
+
+.vivos {
+  background-color: #97ce4c29;
+  color: #b6f3ce;
+}
+
+.desconocidos {
+  background-color: #fffb293d;
+  color: #c7c400;
+}
+
+#ordenar {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #172033;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+#ordenar.activo {
+    color: #0d1f18;
+    background-color: #9ee66a;
+}
