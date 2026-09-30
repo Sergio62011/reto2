@@ -36,9 +36,7 @@ let nombres = [];
 let mostrar = false;
 
 function encontrarNombres() {
-    for (let i = 0; i < personajes.length; i++) {
-        nombres.push(personajes[i].name)
-    };
+    nombres = personajes.map(personaje => personaje.name)
 }
 
 function aplicarFiltros() {
